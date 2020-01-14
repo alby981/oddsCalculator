@@ -127,9 +127,10 @@ class Service {
         $data = $aTmp = [];
         switch($type) {
             case "odds":
-                $region = !empty($_GET['region']) ? $_GET['region'] : false;
-                $sport = !empty($_GET['sport']) ? $_GET['sport'] : false;
-                $mkt = !empty($_GET['mkt']) ? $_GET['mkt'] : false;
+                
+                $region = !empty($_GET['region']) ? filter_input(INPUT_GET, 'region', FILTER_SANITIZE_SPECIAL_CHARS) : false;
+                $sport = !empty($_GET['sport']) ? filter_input(INPUT_GET, 'sport', FILTER_SANITIZE_SPECIAL_CHARS) : false;
+                $mkt = !empty($_GET['mkt']) ? filter_input(INPUT_GET, 'mkt', FILTER_SANITIZE_SPECIAL_CHARS) : false;
                 
                 if (empty($region) || empty($sport) || empty($mkt) ) {
                     echo json_encode(["status" => "error","msg"=> "You need to specify region / sport / mkt"]);
