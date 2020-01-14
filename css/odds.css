@@ -1,0 +1,101 @@
+#odds_mkts, #odds_regions, #odds_sports {
+    display:none;
+}
+
+.odd_calculator .form-control,.odd_calculator button,.odds_payout,.odd_choice .form-control  {
+    height:50px;
+}
+
+.form-group button {
+    height:50px;
+}
+.odd_calculator,.odd_choice,.odds_latest  {
+    background-color: #eee;
+    margin: 0 auto;
+}
+.odds_latest-cell {
+    font-size:1em;
+    text-align:right;
+    padding:5px;
+}   
+@media screen and (min-width: 600px) {
+    
+    .odd_calculator,.odd_choice,.odds_latest  {
+        max-width:800px;
+        padding:40px;
+    }
+    #odds_guidelines_filter {
+        width: 300px
+    }
+}
+@media screen and (max-width: 599px) {
+    .odd_calculator,.odd_choice,.odds_latest  {
+        margin: 0 auto;
+        padding:20px;
+    }
+    .form-control .form-control-sm {
+        max-width: 80%;
+    }
+    .odds_latest_header {
+        font-size:0.7em;
+    }
+    .odds_latest-cell {
+        font-size:0.7em;
+    }
+    #odds_latest {
+        padding:15px;
+    }
+    #odds_guidelines_filter {
+        width: 200px
+    }
+}
+
+hr {
+    margin: 20px 0 !important;
+}
+.odd_calculator label {
+    text-align: center;
+    font-weight: bold;
+}
+
+.odds_payout {
+    background-color:black;
+    color:white;
+    text-align: center;
+    line-height: 50px;
+}
+
+.lh50 {
+    line-height: 50px;
+}
+
+.odds_error {
+    display:none;
+}
+
+.pt20 {
+    padding-top:20px;
+    margin-top:10px;
+}
+
+.odds_latest_title {
+    text-align: center;
+    font-weight: bold;
+}
+.odds_latest_header {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+#odds_guidelines {
+    width:100% !important;
+}
+
+
+.select_show_error {
+    display: none;
+    color:red;
+    font-weight:bold;
+}
