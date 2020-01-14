@@ -5,14 +5,15 @@
     </div>
     <hr>
     <form id="odds_form">
-
-            Odds Format: 
-            <select class="form-control" id="odds_format">
-                <option value="american">American</option>
-                <option value="fractal">Fractal</option>
-                <option value="decimal">Decimal</option>
-            </select>
+        Odds Format: 
+        <select class="form-control" id="odds_format">
+            <option value="american">American</option>
+            <option value="fractal">Fractal</option>
+            <option value="decimal">Decimal</option>
+        </select>
+        
         <div class="odds_error"></div>
+        
         <div class="odd_container">
             <div class="row">
                 <div class="col-6">

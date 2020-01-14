@@ -103,6 +103,10 @@ Class Odds {
         $handleBootstrap = 'odds_datatables_bootstrap_handle';
         wp_register_script($handleBootstrap, $this->plugin_dir_url . "js/DataTables/js/dataTables.bootstrap4.js", array('jquery'), null, true);
         wp_enqueue_script($handleBootstrap);
+        
+        $handleResponsive = 'odds_datatables_responsive';
+        wp_register_script($handleResponsive, $this->plugin_dir_url . "js/datatableResponsive.js", array('jquery'), null, true);
+        wp_enqueue_script($handleResponsive);
     }
     
     /**

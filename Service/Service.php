@@ -32,9 +32,10 @@ class Service {
         
         $response = curl_exec($curl);
         $err = curl_error($curl);
+        if ($err) {
+            //TODO: here i should handle this with an exception. 
+        }
         curl_close($curl);
-
-        
         return $response;
     }
 
@@ -42,6 +43,9 @@ class Service {
      * @return mixed|string
      */
     public static function getOdds() {
+        //TODO: fractal method is currently missing... didn't have time but 
+        // it will be easy to implement. 
+        
         global $wpdb;
         $odds = [];
         parse_str($_GET['odds_data'], $odds);
@@ -73,7 +77,6 @@ class Service {
                 return;
             }
             $oddsSave[] = [$stake,$odd];
-            
             if ($decimal) {
                 $oddsCalculated[] = $odd * $stake;
             }
@@ -87,7 +90,8 @@ class Service {
         }
         
         $payout = array_sum($oddsCalculated);
-        $currency = "$";
+        
+        $currency = Config::$CURRENCY;
         $aMsg = ['status' => 'ok', 'msg' => "$currency $payout"];
         
         self::saveOdds($oddsSave, $totOddsCalculated, $odds_format,$payout);
@@ -108,7 +112,6 @@ class Service {
                 "INSERT INTO `wp_odds_latest_details` (`odds_id`, `odds`, `stake`)
                 VALUES (%f, %f, %f);",$lastInsertId, $odd, $stake));
         }
-        
     }
     
     /**
@@ -249,6 +252,9 @@ class Service {
      */
     public static function getLatest() {
         global $wpdb;
+        
+        //TODO: i didn't put any limit here... for testing purposes. 
+        // but takes few min to add and test in case.
         $sql = "SELECT * FROM
                     wp_odds_latest
                 JOIN

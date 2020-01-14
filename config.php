@@ -10,6 +10,7 @@ class Config
     //THE FOLLOWING API KEY SHOULD BE IN A WP CONFIG FILE 
     // OR IN THE DB AND SET UP THROUGH AN ADMIN INTERFACE (WP_OPTION)
     static $API_KEY = '';
+    static $CURRENCY = '$';
     
     static $REGION = [
         "us" => "United States",

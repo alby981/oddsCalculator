@@ -1,5 +1,3 @@
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/fh-3.1.6/r-2.2.3/datatables.min.js"></script>
-
 <form id="odds_remote">
     <div class="container odd_choice col-12">
         <div class="select_show_error"></div>
