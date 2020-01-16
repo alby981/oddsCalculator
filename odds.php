@@ -136,6 +136,10 @@ Class Odds {
         add_action('wp_ajax_getChoices', array($service, 'getChoices'));
         add_action('wp_ajax_getLatest', array($service, 'getLatest'));
         add_action('wp_ajax_getRemote', array($service, 'getRemote'));
+        add_action('wp_ajax_nopriv_getOdds', array($service, 'getOdds'));
+        add_action('wp_ajax_nopriv_getChoices', array($service, 'getChoices'));
+        add_action('wp_ajax_nopriv_getLatest', array($service, 'getLatest'));
+        add_action('wp_ajax_nopriv_getRemote', array($service, 'getRemote'));
     }
     
      /**
